@@ -1,1 +1,43 @@
-/*# sourceMappingURL=style.css.map */
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.shadow1 {
+  background-color: #000000;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Font and typography ==========*/
+  --body-font: "Helvetica", sans-serif;
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --big-font-size: 2.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+  /*========== Font weight ==========*/
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
