@@ -1,0 +1,24 @@
+{
+  "name": "order",
+  "version": "1.0.0",
+  "description": "test exersice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/a-gran/order.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Alexey Shramko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-gran/order/issues"
+  },
+  "homepage": "https://github.com/a-gran/order#readme"
+}
