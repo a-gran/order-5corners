@@ -155,6 +155,11 @@ body {
   content: "";
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 .order-header {
   display: flex;
   align-items: flex-end;
@@ -174,4 +179,21 @@ body {
 
 .order-header__enter {
   font-size: var(--reg14);
+}
+
+.order-total {
+  max-width: 400px;
+  max-height: 574px;
+  border: solid 1px #6E6E6E;
+}
+
+.order-total__content {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-costs__row {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

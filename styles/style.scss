@@ -153,7 +153,6 @@ body {
 // breadcrumbs
 .breadcrumbs-items {
 	margin: 3.125rem 0;
-	;
 }
 
 .breadcrumbs-items__link {
@@ -185,6 +184,12 @@ body {
 	content: "";
 }
 
+// content
+.content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
 // order-header
 .order-header {
 	display: flex;
@@ -205,4 +210,22 @@ body {
 
 .order-header__enter {
 	font-size: var(--reg14);
+}
+
+// order-total
+.order-total {
+	max-width: 400px;
+	max-height: 574px;
+	border: solid 1px $grey1;
+}
+
+.order-total__content {
+	padding: 20px 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.order-costs__row {
+	display: flex;
+	justify-content: space-between;
 }
