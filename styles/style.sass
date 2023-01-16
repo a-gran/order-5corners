@@ -1,0 +1,219 @@
+//  $variables css
+
+// $colors
+$black: #000000
+$grey1: #6E6E6E
+$grey2: #C8C8C8
+$grey3: #F1F1F1
+$white: #FFFFFF
+$colorError: #D92C2C
+$success: #007E06
+$blueProduct: #106DA2
+$brownProduct: #AE6D0C
+$blackProduct: #444444
+
+// fonts
+// $font-size
+$reg10: 10px
+$reg12: 0.75rem
+$reg14: 14px
+$reg16: 1rem
+$reg20: 1.25rem
+$reg24: 1.5rem
+$reg28: 1.75rem
+$reg40: 2.5rem
+
+// $font-family
+$mainFont: Helvetica
+
+// $weights
+$normal: 400
+$bold: 700
+
+@font-face
+	font-family: Helvetica
+	src: url(../fonts/helvetica_regular.otf)
+
+// effects
+.shadow1
+	background-color: $black
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1)
+
+.bold
+	font-weight: $bold
+
+.colorError
+	color: $colorError
+
+// global styles
+*,
+:before,
+:after
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+html
+	font-size: 16px
+
+body
+	font-family: $mainFont, Arial, sans-serif
+
+// styles
+// top-header
+.header
+	border-bottom: 0.5px solid $grey2
+
+.container
+	max-width: 1200px
+	margin: 0 auto
+
+.top-header
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	align-items: center
+	height: 4.5rem
+
+// nav-menu
+.nav-menu__link,
+.breadcrumbs-items__link
+	text-decoration: none
+	color: $black
+
+.nav-menu
+	display: flex
+	font-size: $reg14
+
+.nav-menu__link:not(last-child)
+	padding-right: 2.5rem
+
+// logo
+.top-header__logo
+	display: flex
+	justify-content: center
+
+// top-header__right
+.top-header__right
+	display: flex
+	justify-content: flex-end
+
+.top-header__right-item:not(last-child)
+	padding-right: 2rem
+
+.top-header__search::before
+	content: url(../icons/searchOff.png)
+	transition: 0.3s
+
+.top-header__search:hover::before
+	content: url(../icons/searchOn.png)
+	transition: 0.3s
+
+.top-header__accaunt::before
+	content: url(../icons/accauntOff.png)
+	transition: 0.3s
+
+.top-header__accaunt:hover::before
+	content: url(../icons/accauntOn.png)
+	transition: 0.3s
+
+.top-header__favorites::before
+	content: url(../icons/heartWithNumberOff.png)
+	transition: 0.3s
+
+.top-header__favorites:hover::before
+	content: url(../icons/heartWithNumberOn.png)
+	transition: 0.3s
+
+.top-header__bag::before
+	content: url(../icons/bagWithNumberOff.png)
+	transition: 0.3s
+
+.top-header__bag:hover::before
+	content: url(../icons/bagWithNumberOn.png)
+	transition: 0.3s
+
+// breadcrumbs
+.breadcrumbs-items
+	margin: 3.125rem 0
+
+.breadcrumbs-items__link
+	font-size: $reg12
+
+.breadcrumbs-items__link
+	color: $grey1
+
+.breadcrumbs-items__link:not(last-child)
+	padding-right: 0.6rem
+
+.breadcrumbs-items__link::after
+	content: "/"
+	width: 4px
+	height: 15px
+	color: $grey1
+	font-size: $reg12
+	padding-left: 0.9rem
+
+.breadcrumbs-items__link--active
+	color: $black
+
+.breadcrumbs-items__link--active::after
+	content: ""
+
+// content
+.content
+	display: grid
+	grid-template-columns: 2fr 1fr
+
+// order-header
+.order-header
+	display: flex
+	align-items: flex-end
+
+.order-header__h1
+	padding-right: 20px
+	font-size: $reg40
+	font-weight: $normal
+
+.order-header__is-accaunt
+	padding-right: 5px
+	font-size: $reg14
+	color: $grey1
+
+.order-header__enter
+	font-size: $reg14
+
+// order-total
+.order-total
+	max-width: 400px
+	max-height: 574px
+	border: solid 1px $grey1
+
+.order-total__content
+	padding: 30px 20px
+	display: flex
+	flex-direction: column
+
+.flex-sb
+	display: flex
+	justify-content: space-between
+
+.order-total__goods-header,
+.order-total__row-promo
+	margin-bottom: 1.25rem
+
+.order-total__row-deliviry
+	border-bottom: solid 1px $grey2
+	padding-bottom: 1.25rem
+
+.order-total__row-discount,
+.order-total__row-stock
+	margin-bottom: 0.5rem
+
+.order-total__row-goods,
+.order-total__row-discount,
+.order-total__row-deliviry
+	font-size: $reg20
+
+.order-total__row-stock,
+.order-total__row-promo
+	font-size: $reg16
