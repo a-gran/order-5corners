@@ -6,30 +6,45 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/style.css">
-	<title>Order</title>
+	<title>Оформление заказа</title>
 </head>
 
 <body>
-	<header class="container header">
-		<div class="topHeader">
-			<nav>
-				<a href="#">Каталог</a>
-				<a href="#">О компании</a>
-				<a href="#">Магазины</a>
+	<header class="header">
+		<div class="top-header container">
+			<nav class="nav-menu">
+				<a class="nav-menu__link" href="#">Каталог</a>
+				<a class="nav-menu__link" href="#">О компании</a>
+				<a class="nav-menu__link" href="#">Магазины</a>
 			</nav>
-			<img src="img/logo.png" alt="logo" class="logo">
-			<div class="rightTopHeader">
-				<div class="serch"></div>
-				<div class="auth"></div>
-				<div class="favorites"></div>
-				<div class="cart"></div>
+			<div class="top-header__logo">
+				<img class="top-header__logo-img" src="img/logo.png" alt="logo" class="logo">
+			</div>
+
+			<div class="top-header__right">
+				<div class="top-header__right-item top-header__search"></div>
+				<div class="top-header__right-item top-header__accaunt"></div>
+				<div class="top-header__right-item top-header__favorites"></div>
+				<div class="top-header__right-item top-header__bag"></div>
 			</div>
 		</div>
-		<div class="breadcrumbs">
-
-		</div>
 	</header>
-	<section class="container section">
+
+	<div class="breadcrumbs container">
+		<nav class="breadcrumbs-items">
+			<a class="breadcrumbs-items__link" href="/">Главная</a>
+			<a class="breadcrumbs-items__link breadcrumbs-items__link--active" href="#">Оформление заказа</a>
+		</nav>
+	</div>
+
+	<section class="container">
+		<div class="order-header">
+			<h1 class="order-header__h1">Оформление заказа</h1>
+			<div class="order-header__auth">
+				<span class="order-header__is-accaunt">Есть аккаунт?</span>
+				<span class="order-header__enter">Войти</span>
+			</div>
+		</div>
 
 	</section>
 

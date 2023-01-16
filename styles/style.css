@@ -1,7 +1,32 @@
+.shadow1 {
+  background-color: #000000;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/helvetica_regular.otf);
+}
+:root {
+  --body-font: Helvetica;
+  --reg10: 10px;
+  --reg12: 0.75rem;
+  --reg14: 14px;
+  --reg16: 1rem;
+  --reg20: 1.25rem;
+  --reg24: 1.5rem;
+  --reg28: 1.75rem;
+  --reg40: 2.5rem;
+  --font-normal: 400;
+  --font-bold: 700;
+}
+
 *,
 :before,
 :after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -9,35 +34,144 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  font-family: var(--body-font), Arial, sans-serif;
 }
 
-.shadow1 {
-  background-color: #000000;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-/*=============== VARIABLES CSS ===============*/
-:root {
-  /*========== Font and typography ==========*/
-  --body-font: "Helvetica", sans-serif;
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --big-font-size: 2.5rem;
-  --h1-font-size: 2.25rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.813rem;
-  --tiny-font-size: 0.625rem;
-  /*========== Font weight ==========*/
-  --font-normal: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
+.header {
+  border-bottom: 0.5px solid #C8C8C8;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.top-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 4.5rem;
+}
+
+.nav-menu__link,
+.breadcrumbs-items__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-menu {
+  display: flex;
+  font-size: var(--reg14);
+}
+
+.nav-menu__link:not(last-child) {
+  padding-right: 2.5rem;
+}
+
+.top-header__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.top-header__right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-header__right-item:not(last-child) {
+  padding-right: 2rem;
+}
+
+.top-header__search::before {
+  content: url(../icons/searchOff.png);
+  transition: 0.3s;
+}
+
+.top-header__search:hover::before {
+  content: url(../icons/searchOn.png);
+  transition: 0.3s;
+}
+
+.top-header__accaunt::before {
+  content: url(../icons/accauntOff.png);
+  transition: 0.3s;
+}
+
+.top-header__accaunt:hover::before {
+  content: url(../icons/accauntOn.png);
+  transition: 0.3s;
+}
+
+.top-header__favorites::before {
+  content: url(../icons/heartWithNumberOff.png);
+  transition: 0.3s;
+}
+
+.top-header__favorites:hover::before {
+  content: url(../icons/heartWithNumberOn.png);
+  transition: 0.3s;
+}
+
+.top-header__bag::before {
+  content: url(../icons/bagWithNumberOff.png);
+  transition: 0.3s;
+}
+
+.top-header__bag:hover::before {
+  content: url(../icons/bagWithNumberOn.png);
+  transition: 0.3s;
+}
+
+.breadcrumbs-items {
+  margin: 3.125rem 0;
+}
+
+.breadcrumbs-items__link {
+  font-size: var(--reg12);
+}
+
+.breadcrumbs-items__link {
+  color: #6E6E6E;
+}
+
+.breadcrumbs-items__link:not(last-child) {
+  padding-right: 0.6rem;
+}
+
+.breadcrumbs-items__link::after {
+  content: "/";
+  width: 4px;
+  height: 15px;
+  color: #6E6E6E;
+  font-size: var(--reg12);
+  padding-left: 0.9rem;
+}
+
+.breadcrumbs-items__link--active {
+  color: #000000;
+}
+
+.breadcrumbs-items__link--active::after {
+  content: "";
+}
+
+.order-header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.order-header__h1 {
+  padding-right: 20px;
+  font-size: var(--reg40);
+  font-weight: var(--font-normal);
+}
+
+.order-header__is-accaunt {
+  padding-right: 5px;
+  font-size: var(--reg14);
+  color: #6E6E6E;
+}
+
+.order-header__enter {
+  font-size: var(--reg14);
 }/*# sourceMappingURL=style.css.map */
