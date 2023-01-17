@@ -1,222 +1,271 @@
 @font-face {
-	font-family: Helvetica;
-	src: url(../fonts/helvetica_regular.otf);
+  font-family: Helvetica;
+  src: url(../fonts/helvetica_regular.otf);
 }
-
 .shadow1 {
-	background-color: #000000;
-	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .bold {
-	font-weight: 700;
+  font-weight: 700;
 }
 
-.colorError {
-	color: #D92C2C;
+.color-error {
+  color: #D92C2C;
 }
 
 *,
 :before,
 :after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-	font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .header {
-	border-bottom: 0.5px solid #C8C8C8;
+  border-bottom: 0.5px solid #C8C8C8;
 }
 
 .container {
-	max-width: 1200px;
-	margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .top-header {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	align-items: center;
-	height: 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 4.5rem;
 }
 
 .nav-menu__link,
 .breadcrumbs-items__link {
-	text-decoration: none;
-	color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 .nav-menu {
-	display: flex;
-	font-size: 14px;
+  display: flex;
+  font-size: 14px;
 }
 
 .nav-menu__link:not(last-child) {
-	padding-right: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .top-header__logo {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .top-header__right {
-	display: flex;
-	justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .top-header__right-item:not(last-child) {
-	padding-right: 2rem;
+  padding-right: 2rem;
 }
 
 .top-header__search::before {
-	content: url(../icons/searchOff.png);
-	transition: 0.3s;
+  content: url(../icons/searchOff.png);
+  transition: 0.3s;
 }
 
 .top-header__search:hover::before {
-	content: url(../icons/searchOn.png);
-	transition: 0.3s;
+  content: url(../icons/searchOn.png);
+  transition: 0.3s;
 }
 
 .top-header__accaunt::before {
-	content: url(../icons/accauntOff.png);
-	transition: 0.3s;
+  content: url(../icons/accauntOff.png);
+  transition: 0.3s;
 }
 
 .top-header__accaunt:hover::before {
-	content: url(../icons/accauntOn.png);
-	transition: 0.3s;
+  content: url(../icons/accauntOn.png);
+  transition: 0.3s;
 }
 
 .top-header__favorites::before {
-	content: url(../icons/heartWithNumberOff.png);
-	transition: 0.3s;
+  content: url(../icons/heartWithNumberOff.png);
+  transition: 0.3s;
 }
 
 .top-header__favorites:hover::before {
-	content: url(../icons/heartWithNumberOn.png);
-	transition: 0.3s;
+  content: url(../icons/heartWithNumberOn.png);
+  transition: 0.3s;
 }
 
 .top-header__bag::before {
-	content: url(../icons/bagWithNumberOff.png);
-	transition: 0.3s;
+  content: url(../icons/bagWithNumberOff.png);
+  transition: 0.3s;
 }
 
 .top-header__bag:hover::before {
-	content: url(../icons/bagWithNumberOn.png);
-	transition: 0.3s;
+  content: url(../icons/bagWithNumberOn.png);
+  transition: 0.3s;
 }
 
 .breadcrumbs-items {
-	margin: 3.125rem 0;
+  margin: 3.125rem 0;
 }
 
 .breadcrumbs-items__link {
-	font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .breadcrumbs-items__link {
-	color: #6E6E6E;
+  color: #6E6E6E;
 }
 
 .breadcrumbs-items__link:not(last-child) {
-	padding-right: 0.6rem;
+  padding-right: 0.6rem;
 }
 
 .breadcrumbs-items__link::after {
-	content: "/";
-	width: 4px;
-	height: 15px;
-	color: #6E6E6E;
-	font-size: 0.75rem;
-	padding-left: 0.9rem;
+  content: "/";
+  width: 4px;
+  height: 15px;
+  color: #6E6E6E;
+  font-size: 0.75rem;
+  padding-left: 0.9rem;
 }
 
 .breadcrumbs-items__link--active {
-	color: #000000;
+  color: #000000;
 }
 
 .breadcrumbs-items__link--active::after {
-	content: "";
+  content: "";
 }
 
 .content {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .order-header {
-	display: flex;
-	align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .order-header__h1 {
-	padding-right: 20px;
-	font-size: 2.5rem;
-	font-weight: 400;
+  padding-right: 20px;
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 
 .order-header__is-accaunt {
-	padding-right: 5px;
-	font-size: 14px;
-	color: #6E6E6E;
+  padding-right: 5px;
+  font-size: 14px;
+  color: #6E6E6E;
 }
 
 .order-header__enter {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .order-total {
-	max-width: 400px;
-	max-height: 574px;
-	border: solid 1px #6E6E6E;
+  max-width: 400px;
+  max-height: 574px;
+  border: solid 1px #6E6E6E;
 }
 
 .order-total__content {
-	padding: 30px 20px;
-	display: flex;
-	flex-direction: column;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-sb {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .order-total__goods-header,
 .order-total__row-promo {
-	margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .order-total__row-deliviry {
-	border-bottom: solid 1px #C8C8C8;
-	padding-bottom: 1.25rem;
+  border-bottom: solid 1px #C8C8C8;
+  padding-bottom: 1.25rem;
 }
 
 .order-total__row-discount,
 .order-total__row-stock {
-	margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .order-total__row-goods,
 .order-total__row-discount,
-.order-total__row-deliviry {
-	font-size: 1.25rem;
+.order-total__row-deliviry,
+.receipt-goods__desc-header {
+  font-size: 1.25rem;
 }
 
 .order-total__row-stock,
 .order-total__row-promo {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  width: 34px;
+  height: 14px;
+  background-color: rgba(200, 200, 200, 0.5);
+  display: block;
+  border-radius: 17px;
+  position: relative;
+  mix-blend-mode: normal;
+  left: calc(50% - 17px + 3.5px);
+  top: calc(50% - 7px + 0.5px);
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 11px);
+  left: -5px;
+  width: 22px;
+  height: 22px;
+  background-color: #6E6E6E;
+  border-radius: 11px;
+  transition: 0.3s;
+}
+
+input:checked + label:after {
+  left: calc(100% + 5px);
+  transform: translateX(-100%);
+  background: #000000;
+}
+
+.receipt-goods {
+  display: flex;
+}
+
+.receipt-goods__desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.receipt-goods__desc-terms {
+  font-size: 0.75rem;
+  color: #6E6E6E;
+}/*# sourceMappingURL=style.css.map */

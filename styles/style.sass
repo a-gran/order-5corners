@@ -42,7 +42,7 @@ $bold: 700
 .bold
 	font-weight: $bold
 
-.colorError
+.color-error
 	color: $colorError
 
 // global styles
@@ -183,6 +183,7 @@ body
 	font-size: $reg14
 
 // order-total
+// payment
 .order-total
 	max-width: 400px
 	max-height: 574px
@@ -211,9 +212,58 @@ body
 
 .order-total__row-goods,
 .order-total__row-discount,
-.order-total__row-deliviry
+.order-total__row-deliviry,
+.receipt-goods__desc-header
 	font-size: $reg20
 
 .order-total__row-stock,
 .order-total__row-promo
 	font-size: $reg16
+
+// toggle
+input[type=checkbox]
+	height: 0
+	width: 0
+	visibility: hidden
+
+// track
+label
+	cursor: pointer
+	width: 34px
+	height: 14px
+	background-color: rgba(200, 200, 200, 0.5)
+	display: block
+	border-radius: 17px
+	position: relative
+	mix-blend-mode: normal
+	left: calc(50% - 34px/2 + 3.5px)
+	top: calc(50% - 14px/2 + 0.5px)
+
+// knob
+label:after
+	content: ''
+	position: absolute
+	top: calc(50% - 22px/2)
+	left: -5px
+	width: 22px
+	height: 22px
+	background-color: $grey1
+	border-radius: 11px
+	transition: 0.3s
+
+// switch
+input:checked + label:after
+	left: calc(100% + 5px)
+	transform: translateX(-100%)
+	background: $black
+
+.receipt-goods
+	display: flex
+
+.receipt-goods__desc
+	display: flex
+	flex-direction: column
+
+.receipt-goods__desc-terms
+	font-size: $reg12
+	color: $grey1
