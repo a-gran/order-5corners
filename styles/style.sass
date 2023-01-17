@@ -45,6 +45,9 @@ $bold: 700
 .color-error
 	color: $colorError
 
+.ruble
+	font-weight: $normal
+
 // global styles
 *,
 :before,
@@ -220,6 +223,22 @@ body
 .order-total__row-promo
 	font-size: $reg16
 
+// receipt
+.receipt-goods
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 20px 0
+	border-bottom: 1px solid $grey2
+
+.receipt-goods__desc
+	display: flex
+	flex-direction: column
+
+.receipt-goods__desc-terms
+	font-size: $reg12
+	color: $grey1
+
 // toggle
 input[type=checkbox]
 	height: 0
@@ -257,13 +276,24 @@ input:checked + label:after
 	transform: translateX(-100%)
 	background: $black
 
-.receipt-goods
+.receipt-goods__toggle
 	display: flex
+	position: relative
+	top: -5px
 
-.receipt-goods__desc
+// total-cost
+.total-cost
 	display: flex
-	flex-direction: column
+	justify-content: space-between
+	font-size: $reg28
+	margin: 20px 0
 
-.receipt-goods__desc-terms
-	font-size: $reg12
+// promocode
+.promo-field
+	padding: 10px
+	outline: none
+	border: 1px solid $grey2
+
+.promo-field::placeholder
 	color: $grey1
+	c

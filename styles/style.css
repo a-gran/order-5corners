@@ -15,6 +15,10 @@
   color: #D92C2C;
 }
 
+.ruble {
+  font-weight: 400;
+}
+
 *,
 :before,
 :after {
@@ -219,6 +223,24 @@ body {
   font-size: 1rem;
 }
 
+.receipt-goods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #C8C8C8;
+}
+
+.receipt-goods__desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.receipt-goods__desc-terms {
+  font-size: 0.75rem;
+  color: #6E6E6E;
+}
+
 input[type=checkbox] {
   height: 0;
   width: 0;
@@ -256,16 +278,33 @@ input:checked + label:after {
   background: #000000;
 }
 
-.receipt-goods {
+.receipt-goods__toggle {
   display: flex;
+  position: relative;
+  top: -5px;
 }
 
-.receipt-goods__desc {
+.total-cost {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.75rem;
+  margin: 20px 0;
 }
 
-.receipt-goods__desc-terms {
-  font-size: 0.75rem;
+.promo-field {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #C8C8C8;
+}
+
+.promo-field::-moz-placeholder {
+  color: #6E6E6E;
+}
+
+.promo-field:-ms-input-placeholder {
+  color: #6E6E6E;
+}
+
+.promo-field::placeholder {
   color: #6E6E6E;
 }/*# sourceMappingURL=style.css.map */
