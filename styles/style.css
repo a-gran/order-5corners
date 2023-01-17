@@ -59,7 +59,7 @@ body {
 
 .nav-menu {
   display: flex;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .nav-menu__link:not(last-child) {
@@ -164,19 +164,19 @@ body {
 }
 
 .order-header__h1 {
-  padding-right: 20px;
+  padding-right: 1.25rem;
   font-size: 2.5rem;
   font-weight: 400;
 }
 
 .order-header__is-accaunt {
   padding-right: 5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #6E6E6E;
 }
 
 .order-header__enter {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .order-total {
@@ -186,7 +186,7 @@ body {
 }
 
 .order-total__content {
-  padding: 30px 20px;
+  padding: 30px 1.25rem;
   display: flex;
   flex-direction: column;
 }
@@ -227,7 +227,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid #C8C8C8;
 }
 
@@ -288,13 +288,15 @@ input:checked + label:after {
   display: flex;
   justify-content: space-between;
   font-size: 1.75rem;
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 .promo-field {
-  padding: 10px;
+  padding: 0.625rem;
   outline: none;
   border: 1px solid #C8C8C8;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .promo-field::-moz-placeholder {
@@ -307,4 +309,24 @@ input:checked + label:after {
 
 .promo-field::placeholder {
   color: #6E6E6E;
+}
+
+.btn-order {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9375rem;
+}
+
+.policy {
+  margin-top: 0.625rem;
+  text-align: center;
+  color: #6E6E6E;
+  font-size: 0.875rem;
+  width: 360px;
+}
+
+.policy__link {
+  color: inherit;
 }/*# sourceMappingURL=style.css.map */
