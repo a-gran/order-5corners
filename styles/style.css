@@ -160,7 +160,6 @@ body {
 
 .order-header {
   display: flex;
-  align-items: flex-end;
 }
 
 .order-header__h1 {
@@ -301,14 +300,17 @@ input:checked + label:after {
 
 .promo-field::-moz-placeholder {
   color: #6E6E6E;
+  font-size: 1rem;
 }
 
 .promo-field:-ms-input-placeholder {
   color: #6E6E6E;
+  font-size: 1rem;
 }
 
 .promo-field::placeholder {
   color: #6E6E6E;
+  font-size: 1rem;
 }
 
 .btn-order {
@@ -329,4 +331,74 @@ input:checked + label:after {
 
 .policy__link {
   color: inherit;
+}
+
+.good-card {
+  padding: 25px 0;
+  display: flex;
+}
+
+.good-card__foto {
+  margin-right: 1.25rem;
+}
+
+.good-card__img {
+  max-width: 8.125rem;
+  max-height: 10rem;
+}
+
+.good-card__desc {
+  max-width: 197px;
+}
+
+.good-card__desc-header {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.articul {
+  margin-bottom: 10px;
+}
+
+.articul__number,
+.articul__header,
+.season__header,
+.season__number {
+  font-size: 0.75rem;
+}
+
+.articul__header,
+.season__header {
+  color: #6E6E6E;
+  margin-right: 5px;
+}
+
+.size {
+  display: flex;
+}
+
+.size__item {
+  list-style-type: none;
+  width: 30px;
+  height: 30px;
+  background-color: #F1F1F1;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size__item--hover {
+  transition: 0.3s;
+}
+
+.size__item--hover:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+
+.size__item:not(last-child) {
+  margin-right: 5px;
 }/*# sourceMappingURL=style.css.map */
