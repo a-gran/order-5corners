@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<div class="order-goods">
-				<h2 class="order-goods__h2">
+				<h2 class="order-goods__header">
 					<span>3</span> товара на сумму <span>25 000</span> &#8381;
 				</h2>
 			</div>
@@ -215,6 +215,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="order-total">
 			<div class="order-total__content">
 				<div class="order-total__payment">
@@ -262,7 +263,33 @@
 				</div>
 			</div>
 		</div>
+	</section>
 
+	<section class="contacts-data container">
+
+		<h2 class="contacts-data__header">Контактные данные</h2>
+		<form class="contacts-data__form" action="submit">
+			<fieldset>
+				<legend>Имя</legend>
+				<input class="contacts-data__name" type="text" id="name" name="name" placeholder="Имя">
+				<label for="name"></label>
+			</fieldset>
+
+			<fieldset>
+				<input class="contacts-data__surname" type="text" id="surname" name="surname" placeholder="Фамилия">
+				<label for="surname"></label>
+			</fieldset>
+
+			<fieldset>
+				<input class="contacts-data__phone" type="phone" id="phone" name="phone" placeholder="Телефон">
+				<label for="phone"></label>
+			</fieldset>
+
+			<fieldset>
+				<input class="contacts-data__email" type="email" id="email" name="email" placeholder="Email">
+				<label for="email"></label>
+			</fieldset>
+		</form>
 	</section>
 
 	<script src="js/script.js"></script>
