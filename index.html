@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="build/css/style.min.css">
 	<title>Оформление заказа</title>
 </head>
 
@@ -18,7 +18,7 @@
 				<a class="nav-menu__link" href="#">Магазины</a>
 			</nav>
 			<div class="top-header__logo">
-				<img class="top-header__logo-img" src="img/logo.png" alt="logo" class="logo">
+				<img class="top-header__logo-img" src="build/img/logo.png" alt="logo" class="logo">
 			</div>
 
 			<div class="top-header__right">
@@ -54,7 +54,7 @@
 			<div class="good-wrap">
 				<div class="good-card">
 					<div class="good-card__foto">
-						<img class="good-card__img" src="img/good1.png" alt="foto">
+						<img class="good-card__img" src="build/img/good1.png" alt="foto">
 					</div>
 					<div class="good-card__desc">
 						<h3 class="good-card__desc-header">
@@ -68,41 +68,138 @@
 							<span class="season__header">Сезон</span>
 							<span class="season__number">Осень-зима</span>
 						</div>
-						<div class="size">
-							<div class="size__item size__item--hover">XS</div>
-							<div class="size__item size__item--hover">S</div>
-							<div class="size__item size__item--hover">M</div>
-							<div class="size__item size__item--hover">L</div>
-							<div class="size__item size__item--hover">XL</div>
+						<div class="good-size">
+							<input class="size__check" id="512-05-XS" type="radio" name="size" />
+							<label class="size__label" for="512-05-XS">XS</label>
+							<input class="size__check" id="512-05-S" type="radio" name="size" />
+							<label class="size__label" for="512-05-S">S</label>
+							<input class="size__check" id="512-05-M" type="radio" name="size" checked />
+							<label class="size__label" for="512-05-M">M</label>
+							<input class="size__check" id="512-05-L" type="radio" name="size" />
+							<label class="size__label" for="512-05-L">L</label>
+							<input class="size__check" id="512-05-XL" type="radio" name="size" />
+							<label class="size__label" for="512-05-XL">XL</label>
 						</div>
-						<ul class="color-product">
-							<div class="color-product__black"></div>
-							<div class="color-product__blue"></div>
-							<div class="color-product__brown"></div>
-						</ul>
+						<div class="color-product">
+							<input class="color-product__check" id="512-05-black" type="radio" name="color-product"
+								checked />
+							<label class="color-product__label" for="512-05-black">
+								<span class="color-product__сircle color-product__сircle--black"></span>
+							</label>
+							<input class="color-product__check" id="512-05-blue" type="radio" name="color-product" />
+							<label class="color-product__label" for="512-05-blue">
+								<span class="color-product__сircle color-product__сircle--blue"></span>
+							</label>
+							<input class="color-product__check" id="512-05-brown" type="radio" name="color-product" />
+							<label class="color-product__label" for="512-05-brown">
+								<span class="color-product__сircle color-product__сircle--brown"></span>
+							</label>
+						</div>
 					</div>
 					<div class="good-cost">
 						<span class="good-cost__cross">
 							<span class="good-cost__cross-for-one">12 000</span> &#8381;
 						</span>
 						<span class="good-cost__final">
-							<span class="good-cost__final-for-one">10 000</span> &#8381;
+							<span class="good-cost__final-for-one bold">10 000</span> &#8381;
 						</span>
 					</div>
 					<div class="good-count">
-						<div class="minus"> - </div>
-						<div class="number"> 2 </div>
-						<div class="plus"> + </div>
+						<div class="good-count__minus"> &minus; </div>
+						<div class="good-count__number"> 2 </div>
+						<div class="good-count__plus"> &plus; </div>
 					</div>
-					<div class="good-cost">
+					<div class="good-cost-all">
 						<span class="good-cost__cross">
 							<span class="good-cost__cross-for-all">24 000</span> &#8381;
 						</span>
 						<span class="good-cost__final">
-							<span class="good-cost__final-for-all">20 000</span> &#8381;
+							<span class="good-cost__final-for-all bold">20 000</span> &#8381;
 						</span>
 					</div>
-					<div class="close-btn"></div>
+					<button class="close-btn" type="button">
+						<span aria-hidden="true"> &times; </span>
+					</button>
+				</div>
+
+				<div class="good-del">
+					<div class="good-del__text">Товар
+						<span>Наименование товара</span> был удален из корзины.
+						<span class="good-del__recover">Восстановить</span>
+					</div>
+					<button class="good-del__close-btn" type="button">
+						<span aria-hidden="true"> &times; </span>
+					</button>
+				</div>
+
+				<div class="good-card">
+					<div class="good-card__foto">
+						<img class="good-card__img" src="build/img/good1.png" alt="foto">
+					</div>
+					<div class="good-card__desc">
+						<h3 class="good-card__desc-header">
+							Вязанная шапка Zolla
+						</h3>
+						<div class="articul">
+							<span class="articul__header">Артикул</span>
+							<span class="articul__number">891-256</span>
+						</div>
+						<div class="season">
+							<span class="season__header">Сезон</span>
+							<span class="season__number">Демисезон</span>
+						</div>
+						<div class="good-size">
+							<input class="size__check" id="891-256-XS" type="radio" name="size" />
+							<label class="size__label" for="891-256-XS">XS</label>
+							<input class="size__check" id="891-256-S" type="radio" name="size" checked />
+							<label class="size__label" for="891-256-S">S</label>
+							<input class="size__check" id="891-256-M" type="radio" name="size" />
+							<label class="size__label" for="891-256-M">M</label>
+							<input class="size__check" id="891-256-L" type="radio" name="size" />
+							<label class="size__label size__label--absent" for="891-256-L">L</label>
+							<input class="size__check" id="891-256-XL" type="radio" name="size" />
+							<label class="size__label size__label--absent" for="891-256-XL">XL</label>
+						</div>
+						<div class="color-product">
+							<input class="color-product__check" id="891-256-black" type="radio" name="color-product"
+								checked />
+							<label class="color-product__label" for="891-256-black">
+								<span class="color-product__сircle color-product__сircle--black"></span>
+							</label>
+							<input class="color-product__check" id="891-256-blue" type="radio" name="color-product" />
+							<label class="color-product__label" for="891-256-blue">
+								<span class="color-product__сircle color-product__сircle--blue"></span>
+							</label>
+							<input class="color-product__check" id="891-256-brown" type="radio" name="color-product" />
+							<label class="color-product__label" for="891-256-brown">
+								<span class="color-product__сircle color-product__сircle--brown"></span>
+							</label>
+						</div>
+					</div>
+					<div class="good-cost">
+						<span class="good-cost__cross">
+							<span class="good-cost__cross-for-one">12 000</span> &#8381;
+						</span>
+						<span class="good-cost__final">
+							<span class="good-cost__final-for-one bold">10 000</span> &#8381;
+						</span>
+					</div>
+					<div class="good-count">
+						<div class="good-count__minus"> &minus; </div>
+						<div class="good-count__number"> 2 </div>
+						<div class="good-count__plus"> &plus; </div>
+					</div>
+					<div class="good-cost-all">
+						<span class="good-cost__cross">
+							<span class="good-cost__cross-for-all">24 000</span> &#8381;
+						</span>
+						<span class="good-cost__final">
+							<span class="good-cost__final-for-all bold">20 000</span> &#8381;
+						</span>
+					</div>
+					<button class="close-btn" type="button">
+						<span aria-hidden="true"> &times; </span>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -137,8 +234,8 @@
 						<span class="receipt-goods__desc-terms">Сроки получения могут измениться</span>
 					</div>
 					<div class="receipt-goods__toggle">
-						<input type="checkbox" id="switch" />
-						<label for="switch"></label>
+						<input class="receipt-goods__switch" type="checkbox" id="switch" />
+						<label class="receipt-goods__label" for="switch"></label>
 					</div>
 				</div>
 				<div class="total-cost">
