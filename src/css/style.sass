@@ -40,13 +40,17 @@ $bold: 700
 	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1)
 
 .bold
-	ont-weight: $bold
+	font-weight: $bold
+
 
 .color-error
 	color: $colorError
 
 .ruble
 	font-weight: $normal
+
+.hidden
+	visibility: hidden
 
 // global styles
 *,
@@ -177,6 +181,10 @@ body
 	margin-bottom: 3.75rem
 	font-size: $reg40
 	font-weight: $normal
+
+.order-header__auth
+	position: relative
+	top: 1.5rem
 
 .order-goods__h2
 	margin-bottom: 1.875rem
@@ -381,6 +389,9 @@ body
 	cursor: pointer
 	transition: 0.3s
 
+.size__label:not(last-child)
+	margin-right: 5px
+
 .size__check:checked + .size__label
 	color: $white
 	background-color: $black
@@ -477,7 +488,12 @@ body
 	font-size: $reg28
 	display: flex
 	line-height: 0.7
+	cursor: pointer
 
+.size__label--absent
+	color: $grey2
+
+// del good
 .good-del
 	display: flex
 	background-color: $grey3
@@ -496,6 +512,7 @@ body
 	display: flex
 	align-items: center
 	padding-right: 20px
+	cursor: pointer
 
 .good-del__recover
 	font-size: $reg14

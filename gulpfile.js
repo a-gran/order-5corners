@@ -16,8 +16,6 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 //Sass препроцессор
 const sass = require('gulp-sass')(require('sass'));
-//Less препроцессор
-const less = require('gulp-less');
 //Stylus препроцессор
 const stylus = require('gulp-stylus');
 //Модуль для сжатия изображений
