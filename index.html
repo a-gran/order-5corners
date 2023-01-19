@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="build/img/favicon.ico">
 	<link rel="stylesheet" href="build/css/style.min.css">
 	<title>Оформление заказа</title>
 </head>
@@ -18,7 +19,7 @@
 				<a class="nav-menu__link" href="#">Магазины</a>
 			</nav>
 			<div class="top-header__logo">
-				<img class="top-header__logo-img" src="build/img/logo.png" alt="logo" class="logo">
+				<img class="top-header__logo-img" src="build/img/LOGO.png" alt="logo" class="logo">
 			</div>
 
 			<div class="top-header__right">
@@ -86,18 +87,20 @@
 						</div>
 
 						<div class="color-product">
-							<input class="color-product__check" id="512-05-black" type="radio" name="color-product-512-05"
-								checked />
+							<input class="color-product__check" id="512-05-black" type="radio"
+								name="color-product-512-05" checked />
 							<label class="color-product__label" for="512-05-black">
 								<span class="color-product__сircle color-product__сircle--black"></span>
 							</label>
 
-							<input class="color-product__check" id="512-05-blue" type="radio" name="color-product-512-05" />
+							<input class="color-product__check" id="512-05-blue" type="radio"
+								name="color-product-512-05" />
 							<label class="color-product__label" for="512-05-blue">
 								<span class="color-product__сircle color-product__сircle--blue"></span>
 							</label>
 
-							<input class="color-product__check" id="512-05-brown" type="radio" name="color-product-512-05" />
+							<input class="color-product__check" id="512-05-brown" type="radio"
+								name="color-product-512-05" />
 							<label class="color-product__label" for="512-05-brown">
 								<span class="color-product__сircle color-product__сircle--brown"></span>
 							</label>
@@ -172,17 +175,20 @@
 							<label class="size__label size__label--absent" for="891-256-XL">XL</label>
 						</div>
 						<div class="color-product">
-							<input class="color-product__check" id="black-891-256" type="radio" name="color-product-891-256" checked />
+							<input class="color-product__check" id="black-891-256" type="radio"
+								name="color-product-891-256" checked />
 							<label class="color-product__label" for="black-891-256">
 								<span class="color-product__сircle color-product__сircle--black"></span>
 							</label>
 
-							<input class="color-product__check" id="blue-891-256" type="radio" name="color-product-891-256" />
+							<input class="color-product__check" id="blue-891-256" type="radio"
+								name="color-product-891-256" />
 							<label class="color-product__label hidden" for="blue-891-256">
 								<span class="color-product__сircle color-product__сircle--blue"></span>
 							</label>
 
-							<input class="color-product__check" id="brown-891-256" type="radio" name="color-product-891-256" />
+							<input class="color-product__check" id="brown-891-256" type="radio"
+								name="color-product-891-256" />
 							<label class="color-product__label hidden" for="brown-891-256">
 								<span class="color-product__сircle color-product__сircle--brown"></span>
 							</label>
@@ -265,34 +271,21 @@
 		</div>
 	</section>
 
-	<section class="contacts-data container">
-
+	<div class="container contacts-data">
 		<h2 class="contacts-data__header">Контактные данные</h2>
-		<form class="contacts-data__form" action="submit">
-			<fieldset>
-				<legend>Имя</legend>
-				<input class="contacts-data__name" type="text" id="name" name="name" placeholder="Имя">
-				<label for="name"></label>
-			</fieldset>
-
-			<fieldset>
-				<input class="contacts-data__surname" type="text" id="surname" name="surname" placeholder="Фамилия">
-				<label for="surname"></label>
-			</fieldset>
-
-			<fieldset>
-				<input class="contacts-data__phone" type="phone" id="phone" name="phone" placeholder="Телефон">
-				<label for="phone"></label>
-			</fieldset>
-
-			<fieldset>
-				<input class="contacts-data__email" type="email" id="email" name="email" placeholder="Email">
-				<label for="email"></label>
-			</fieldset>
+		<form>
+			<div class="user-box">
+				<input class="user-box__input" id="name" type="text" name="name" required="">
+				<label class="user-box__label" for="name">Имя</label>
+			</div>
+			<div class="user-box">
+				<input class="user-box__input" id="surname" type="text" name="surname" required="">
+				<label class="user-box__label" for="surname">Фамилия</label>
+			</div>
 		</form>
-	</section>
+	</div>
 
-	<script src="js/script.js"></script>
+	<script src="build/js/main.min.js"></script>
 </body>
 
 </html>

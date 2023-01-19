@@ -1,4 +1,4 @@
-//Подключаем галп
+//Подключаем гальп
 const gulp = require('gulp');
 //Объединение файлов
 const concat = require('gulp-concat');
@@ -23,7 +23,7 @@ const rename = require('gulp-rename');
 
 //Порядок подключения файлов со стилями
 const styleFiles = [
-	'./src/css/style.sass'
+	'./src/css/style.scss',
 ]
 //Порядок подключения js файлов
 const scriptFiles = [
@@ -63,7 +63,7 @@ gulp.task('scripts', () => {
 	//Все файлы по шаблону './src/js/**/*.js'
 	return gulp.src(scriptFiles)
 		//Объединение файлов в один
-		.pipe(concat('script.js'))
+		.pipe(concat('main.js'))
 		//Минификация JS
 		.pipe(uglify({
 			toplevel: true
@@ -100,7 +100,7 @@ gulp.task('watch', () => {
 	//Следить за добавлением новых изображений
 	gulp.watch('./src/img/**', gulp.series('img-compress'))
 	//Следить за файлами со стилями с нужным расширением
-	gulp.watch('./src/css/**/*.sass', gulp.series('styles'))
+	gulp.watch('./src/css/**/*.scss', gulp.series('styles'))
 	//Следить за JS файлами
 	gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
 	//При изменении HTML запустить синхронизацию
