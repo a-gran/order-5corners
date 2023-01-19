@@ -619,6 +619,8 @@ body {
 
 // contacts
 .contacts-data {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 	margin-bottom: 200px;
 }
 
@@ -634,19 +636,18 @@ body {
 
 .user-box__input {
 	width: 100%;
-	padding: 10px 0;
+	padding: 15px 0;
 	font-size: $reg16;
 	color: $grey1;
-	margin-bottom: 30px;
-	border: none;
 	border: 1px solid $grey2;
 	outline: none;
 	background: transparent;
+	position: relative;
 }
 
 .user-box__label {
 	position: absolute;
-	top: 0;
+	top: 5px;
 	left: 20px;
 	padding: 0.75rem 0;
 	font-size: $reg16;
@@ -655,13 +656,38 @@ body {
 	transition: .5s;
 }
 
+.user-box__input:focus {
+	padding-left: 1.25rem;
+}
+
 .user-box input:focus ~ label,
 .user-box input:valid ~ label {
-	top: -17px;
-	left: 10px;
+	top: -8px;
+	left: 20px;
 	color: $grey2;
 	font-size: $reg12;
 	background: $white;
-	padding-left: 3px;
-	padding-right: 3px;
+	//padding-left: 3px;
+	//padding-right: 3px;
+	padding: 0 3px;
+}
+
+.contacts-data__form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 1.25rem;
+	grid-row-gap: 1.25rem;
+}
+
+.user-box__search {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	position: relative;
+}
+
+.user-box__input-search::before {
+	content: url(../img/searchOn.png);
+	position: absolute;
+	bottom: 12px;
+	right: 1.5rem;
 }
