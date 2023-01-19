@@ -62,6 +62,10 @@ $bold: 700;
 	justify-content: space-between;
 }
 
+.flex {
+	display: flex;
+}
+
 // global styles
 *,
 :before,
@@ -482,9 +486,6 @@ body {
 .color-product__label {
 	width: 1.25rem;
 	height: 1.25rem;
-	background-color: $white;
-	color: $black;
-	font-size: $reg12;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -517,8 +518,16 @@ body {
 }
 
 // check color of good
-.color-product__check:checked + .color-product__label {
-	border: 1px solid $black;
+.color-product__check:checked + .color-product__label--black {
+	border: 1px solid $blackProduct;
+}
+
+.color-product__check:checked + .color-product__label--blue {
+	border: 1px solid $blueProduct;
+}
+
+.color-product__check:checked + .color-product__label--brown {
+	border: 1px solid $brownProduct;
 }
 
 // cost
@@ -647,7 +656,7 @@ body {
 
 .user-box__label {
 	position: absolute;
-	top: 5px;
+	top: 4px;
 	left: 20px;
 	padding: 0.75rem 0;
 	font-size: $reg16;
@@ -667,12 +676,10 @@ body {
 	color: $grey2;
 	font-size: $reg12;
 	background: $white;
-	//padding-left: 3px;
-	//padding-right: 3px;
 	padding: 0 3px;
 }
 
-.contacts-data__form {
+.contacts-data__form-profile {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 1.25rem;
@@ -685,9 +692,54 @@ body {
 	position: relative;
 }
 
-.user-box__input-search::before {
+.user-box__search-input::before {
 	content: url(../img/searchOn.png);
 	position: absolute;
 	bottom: 12px;
 	right: 1.5rem;
+}
+
+.contacts-payment__header {
+	margin-top: 2.5rem;
+	margin-bottom: 1.875rem;
+	font-weight: $normal;
+}
+
+.contacts-payment__form {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+// payment
+
+.contacts-payment__label {
+	width: 1.375rem;
+	height: 1.375rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-right: 0.625rem;
+	margin-bottom: 1.25rem;
+}
+
+.contacts-payment__сircle {
+	width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+	background-color: $black;
+}
+
+.contacts-payment__input[type=radio] {
+	display: none;
+}
+
+.contacts-payment__input:checked + .contacts-payment__label {
+	border: 1px solid $black;
+}
+
+.contacts-payment__wrap {
+	flex-direction: row-reverse;
 }

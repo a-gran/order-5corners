@@ -90,19 +90,19 @@
 						<div class="color-product">
 							<input class="color-product__check" id="512-05-black" type="radio"
 								name="color-product-512-05" checked />
-							<label class="color-product__label" for="512-05-black">
+							<label class="color-product__label color-product__label--black" for="512-05-black">
 								<span class="color-product__сircle color-product__сircle--black"></span>
 							</label>
 
 							<input class="color-product__check" id="512-05-blue" type="radio"
 								name="color-product-512-05" />
-							<label class="color-product__label" for="512-05-blue">
+							<label class="color-product__label color-product__label--blue" for="512-05-blue">
 								<span class="color-product__сircle color-product__сircle--blue"></span>
 							</label>
 
 							<input class="color-product__check" id="512-05-brown" type="radio"
 								name="color-product-512-05" />
-							<label class="color-product__label" for="512-05-brown">
+							<label class="color-product__label color-product__label--brown" for="512-05-brown">
 								<span class="color-product__сircle color-product__сircle--brown"></span>
 							</label>
 						</div>
@@ -178,19 +178,19 @@
 						<div class="color-product">
 							<input class="color-product__check" id="black-891-256" type="radio"
 								name="color-product-891-256" checked />
-							<label class="color-product__label" for="black-891-256">
+							<label class="color-product__label color-product__label--black" for="black-891-256">
 								<span class="color-product__сircle color-product__сircle--black"></span>
 							</label>
 
 							<input class="color-product__check" id="blue-891-256" type="radio"
 								name="color-product-891-256" />
-							<label class="color-product__label hidden" for="blue-891-256">
+							<label class="color-product__label color-product__label--blue hidden" for="blue-891-256">
 								<span class="color-product__сircle color-product__сircle--blue"></span>
 							</label>
 
 							<input class="color-product__check" id="brown-891-256" type="radio"
 								name="color-product-891-256" />
-							<label class="color-product__label hidden" for="brown-891-256">
+							<label class="color-product__label color-product__label--brown hidden" for="brown-891-256">
 								<span class="color-product__сircle color-product__сircle--brown"></span>
 							</label>
 						</div>
@@ -213,7 +213,7 @@
 							<span class="good-cost__cross-for-all">24 000</span> &#8381;
 						</span>
 						<span class="good-cost__final">
-							<span class="good-cost__final-for-all bold">20 000</span> &#8381;
+							<span class="good-cost__final-for-all bold">500</span> &#8381;
 						</span>
 					</div>
 					<button class="close-btn" type="button">
@@ -273,9 +273,9 @@
 	</section>
 
 	<div class="container contacts-data">
-		<div class="contacts-data__wrap">
+		<form class="contacts-data__wrap">
 			<h2 class="contacts-data__header">Контактные данные</h2>
-			<form class="contacts-data__form">
+			<div class="contacts-data__form-profile">
 				<div class="user-box">
 					<input class="user-box__input" id="name" type="text" name="name" required="">
 					<label class="user-box__label" for="name">Имя</label>
@@ -294,14 +294,44 @@
 				</div>
 				<div class="user-box user-box__search">
 					<input class="user-box__input" id="address" type="text" name="address" required="">
-					<div class="user-box__input-search"></div>
+					<div class="user-box__search-input"></div>
 					<label class="user-box__label" for="address">Адрес доставки</label>
 				</div>
-			</form>
-		</div>
-		<div class="contacts-data__map">
+			</div>
 
-		</div>
+			<h2 class="contacts-payment__header">Оплата</h2>
+			<div class="contacts-payment__form flex">
+				<div class="contacts-payment__wrap flex">
+					<input class="contacts-payment__input" id="cash" type="radio" name="payment"
+						placeholde="Наличными курьеру" checked />
+					Наличными курьеру
+					<label class="contacts-payment__label" for="cash">
+						<span class="contacts-payment__сircle"></span>
+					</label>
+				</div>
+
+				<div class="contacts-payment__wrap flex">
+					<input class="contacts-payment__input" id="card" type="radio" name="payment" />
+					Картой курьеру
+					<label class="contacts-payment__label" for="card">
+						<span class="contacts-payment__сircle"></span>
+					</label>
+				</div>
+
+				<div class="contacts-payment__wrap flex">
+					<input class="contacts-payment__input" id="online" type="radio" name="payment" />
+					Картой онлайн
+					<label class="contacts-payment__label" for="online">
+						<span class="contacts-payment__сircle"></span>
+					</label>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="contacts-data__map">
+
+	</div>
 
 	</div>
 
