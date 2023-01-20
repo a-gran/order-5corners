@@ -630,7 +630,15 @@ body {
 .contacts-data {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	margin-bottom: 200px;
+	column-gap: 2.5rem;
+	margin-bottom: 5rem;
+}
+
+.contacts-data__form-profile {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 1.25rem;
+	grid-row-gap: 1.25rem;
 }
 
 .contacts-data__header {
@@ -639,15 +647,11 @@ body {
 	margin-bottom: 1.35rem;
 }
 
-.user-box {
-	position: relative;
-}
-
 .user-box__input {
 	width: 100%;
 	padding: 15px 0;
 	font-size: $reg16;
-	color: $grey1;
+	color: $black;
 	border: 1px solid $grey2;
 	outline: none;
 	background: transparent;
@@ -662,11 +666,15 @@ body {
 	font-size: $reg16;
 	color: $grey2;
 	pointer-events: none;
-	transition: .5s;
+	transition: 0.3s;
 }
 
 .user-box__input:focus {
 	padding-left: 1.25rem;
+}
+
+.user-box {
+	position: relative;
 }
 
 .user-box input:focus ~ label,
@@ -679,16 +687,8 @@ body {
 	padding: 0 3px;
 }
 
-.contacts-data__form-profile {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap: 1.25rem;
-	grid-row-gap: 1.25rem;
-}
-
 .user-box__search {
-	grid-column-start: 1;
-	grid-column-end: 3;
+	grid-column: span 2;
 	position: relative;
 }
 
@@ -699,8 +699,23 @@ body {
 	right: 1.5rem;
 }
 
+// payment
+.contacts-payment__header,
+.contacts-comment__header {
+	margin-bottom: 1.875rem;
+	font-weight: $normal;
+}
+
 .contacts-payment__header {
 	margin-top: 2.5rem;
+}
+
+.contacts-comment__header {
+	margin-top: 1.25rem;
+}
+
+.contacts-comment__header {
+	margin-top: 1.25rem;
 	margin-bottom: 1.875rem;
 	font-weight: $normal;
 }
@@ -710,7 +725,10 @@ body {
 	align-items: flex-start;
 }
 
-// payment
+.contacts-payment__wrap {
+	flex-direction: row-reverse;
+	margin-bottom: 1.25rem;
+}
 
 .contacts-payment__label {
 	width: 1.375rem;
@@ -722,7 +740,6 @@ body {
 	cursor: pointer;
 	transition: 0.3s;
 	margin-right: 0.625rem;
-	margin-bottom: 1.25rem;
 }
 
 .contacts-payment__сircle {
@@ -740,6 +757,69 @@ body {
 	border: 1px solid $black;
 }
 
-.contacts-payment__wrap {
-	flex-direction: row-reverse;
+// comment
+.contacts-comment__textarea {
+	font-size: $reg12;
+	position: relative;
+}
+
+.contacts-comment__input {
+	width: 100%;
+	height: 10rem;
+	padding: 15px 0;
+	font-size: $reg16;
+	color: $black;
+	border: 1px solid $grey2;
+	outline: none;
+	position: relative;
+	transition: 0.3s;
+	resize: none;
+}
+
+.contacts-comment__input::placeholder {
+	padding-left: 1.25rem;
+	padding-top: 1rem;
+	transition: 0.3s;
+}
+
+.contacts-comment__input:focus {
+	outline: none;
+	padding-left: 1.25rem;
+	transition: 0.3s;
+}
+
+.contacts-comment__label {
+	position: absolute;
+	top: 4px;
+	left: 20px;
+	padding: 0.75rem 0;
+	font-size: $reg16;
+	color: $grey2;
+	pointer-events: none;
+	transition: 0.3s;
+}
+
+.contacts-comment__input:focus ~ label {
+	top: -8px;
+	left: 20px;
+	color: $grey2;
+	font-size: $reg12;
+	background: $white;
+	padding: 0 3px;
+	transition: 0.3s;
+}
+
+.contacts-comment__use-simbols {
+	font-size: $reg12;
+	color: $grey1;
+	padding-left: 1.25rem;
+	padding-top: 0.25rem;
+}
+
+// map
+.contacts-data__iframe-map {
+	width: 100%;
+	height: 450px;
+	border-radius: 5px;
+	border: 1px solid red;
 }

@@ -1,9 +1,16 @@
-//const contactsDataInput = document.querySelector('.contacts-data__input')
-////console.log('contactsDataInput', contactsDataInput)
-//const contactsDataName = document.querySelector('.contacts-data__name')
-////console.log('contactsDataName', contactsDataName)
+// счетчик символов textarea
+window.addEventListener('DOMContentLoaded', () => {
+	const textarea = document.querySelector(".contacts-comment__input")
+	const count = document.querySelector(".contacts-comment__count")
 
-//contactsDataInput.addEventListener('onfocus', showFieldTitle)
+	function countLetters() {
+		const text = textarea.value
+		const textlength = textarea.value.length
+		count.innerText = `${textlength}`
+	}
+
+	textarea.addEventListener('keyup', countLetters)
+})
 
 
 
