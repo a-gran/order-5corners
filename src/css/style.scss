@@ -121,6 +121,7 @@ body {
 .top-header__logo {
 	display: flex;
 	justify-content: center;
+	cursor: pointer;
 }
 
 // top-header__right
@@ -131,6 +132,7 @@ body {
 
 .top-header__right-item:not(last-child) {
 	padding-right: 2rem;
+	cursor: pointer;
 }
 
 .top-header__search::before {
@@ -244,6 +246,7 @@ body {
 
 .order-header__enter {
 	font-size: $reg14;
+	cursor: pointer;
 }
 
 // order-total
@@ -368,6 +371,7 @@ body {
 	border: 1px solid $grey2;
 	font-size: $reg16;
 	margin-bottom: 1.25rem;
+	cursor: pointer;
 }
 
 .promo-field::placeholder {
@@ -381,6 +385,7 @@ body {
 	font-weight: $bold;
 	font-size: $reg16;
 	padding: 0.9375rem;
+	cursor: pointer;
 }
 
 .policy {
@@ -581,6 +586,7 @@ body {
 	font-size: $reg24;
 	position: relative;
 	bottom: 3px;
+	cursor: pointer;
 }
 
 .close-btn {
@@ -649,12 +655,16 @@ body {
 
 .user-box__input {
 	width: 100%;
-	padding: 15px 0;
+	padding: 15px 1.25rem;
 	font-size: $reg16;
 	color: $black;
 	border: 1px solid $grey2;
 	outline: none;
-	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+
+.user-box {
 	position: relative;
 }
 
@@ -669,16 +679,8 @@ body {
 	transition: 0.3s;
 }
 
-.user-box__input:focus {
-	padding-left: 1.25rem;
-}
-
-.user-box {
-	position: relative;
-}
-
-.user-box input:focus ~ label,
-.user-box input:valid ~ label {
+.user-box__input:focus ~ label,
+.user-box__input:valid ~ label {
 	top: -8px;
 	left: 20px;
 	color: $grey2;
@@ -692,11 +694,12 @@ body {
 	position: relative;
 }
 
-.user-box__search-input::before {
+.user-box__search-input::after {
 	content: url(../img/searchOn.png);
 	position: absolute;
 	bottom: 12px;
 	right: 1.5rem;
+	cursor: pointer;
 }
 
 // payment
@@ -758,55 +761,9 @@ body {
 }
 
 // comment
-.contacts-comment__textarea {
-	font-size: $reg12;
-	position: relative;
-}
-
 .contacts-comment__input {
-	width: 100%;
 	height: 10rem;
-	padding: 15px 0;
-	font-size: $reg16;
-	color: $black;
-	border: 1px solid $grey2;
-	outline: none;
-	position: relative;
-	transition: 0.3s;
 	resize: none;
-}
-
-.contacts-comment__input::placeholder {
-	padding-left: 1.25rem;
-	padding-top: 1rem;
-	transition: 0.3s;
-}
-
-.contacts-comment__input:focus {
-	outline: none;
-	padding-left: 1.25rem;
-	transition: 0.3s;
-}
-
-.contacts-comment__label {
-	position: absolute;
-	top: 4px;
-	left: 20px;
-	padding: 0.75rem 0;
-	font-size: $reg16;
-	color: $grey2;
-	pointer-events: none;
-	transition: 0.3s;
-}
-
-.contacts-comment__input:focus ~ label {
-	top: -8px;
-	left: 20px;
-	color: $grey2;
-	font-size: $reg12;
-	background: $white;
-	padding: 0 3px;
-	transition: 0.3s;
 }
 
 .contacts-comment__use-simbols {
@@ -817,9 +774,13 @@ body {
 }
 
 // map
-.contacts-data__iframe-map {
-	width: 100%;
+.contacts-data__map {
 	height: 450px;
+	width: 400px;
 	border-radius: 5px;
-	border: 1px solid red;
+}
+
+[class*="copyrights-pane"],
+[class*="float-button"] {
+	display: none !important;
 }

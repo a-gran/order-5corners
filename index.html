@@ -277,23 +277,23 @@
 			<h2 class="contacts-data__header">Контактные данные</h2>
 			<div class="contacts-data__form-profile">
 				<div class="user-box">
-					<input class="user-box__input" id="name" type="text" name="name" required="">
+					<input class="user-box__input" id="name" type="text" name="name" required>
 					<label class="user-box__label" for="name">Имя</label>
 				</div>
 				<div class="user-box">
-					<input class="user-box__input" id="surname" type="text" name="surname" required="">
+					<input class="user-box__input" id="surname" type="text" name="surname" required>
 					<label class="user-box__label" for="surname">Фамилия</label>
 				</div>
 				<div class="user-box">
-					<input class="user-box__input" id="phone" type="phone" name="phone" required="">
+					<input class="user-box__input" id="phone" type="phone" name="phone" required>
 					<label class="user-box__label" for="phone">Телефон</label>
 				</div>
 				<div class="user-box">
-					<input class="user-box__input" id="email" type="email" name="email" required="">
-					<label class="user-box__label" for="surname">Email</label>
+					<input class="user-box__input" id="email" type="email" name="email" required>
+					<label class="user-box__label" for="email">Email</label>
 				</div>
 				<div class="user-box user-box__search">
-					<input class="user-box__input" id="address" type="text" name="address" required="">
+					<input class="user-box__input" id="address" type="text" name="address" required>
 					<div class="user-box__search-input"></div>
 					<label class="user-box__label" for="address">Адрес доставки</label>
 				</div>
@@ -328,20 +328,18 @@
 			</div>
 
 			<h2 class="contacts-comment__header">Комментарий к заказу</h2>
-			<div class="contacts-comment__textarea">
-				<textarea class="contacts-comment__input" id="comment" type="text" name="comment"
-					maxlength="142"></textarea>
-				<label class="contacts-comment__label" for="comment">Комментарий к заказу</label>
+			<div class="user-box">
+				<textarea class="user-box__input contacts-comment__input" id="comment" type="text" name="comment"
+					maxlength="142" required></textarea>
+				<label class="user-box__label" for="comment">Комментарий к заказу</label>
 			</div>
 			<div class="contacts-comment__use-simbols">
-				Использовано 0/<span class="contacts-comment__count">0</span>символов
+				Использовано <span class="contacts-comment__count">0</span>/142 символов
 			</div>
 		</form>
-		<div class="contacts-data__map">
-			<iframe class="contacts-data__iframe-map" src="" frameborder="0"></iframe>
-		</div>
+		<div class="contacts-data__map" id="map"></div>
 	</div>
-
+	<script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU"></script>
 	<script src="build/js/main.min.js"></script>
 </body>
 
