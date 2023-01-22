@@ -65,9 +65,9 @@ gulp.task('scripts', () => {
 		//Объединение файлов в один
 		.pipe(concat('main.js'))
 		//Минификация JS
-		.pipe(uglify({
-			toplevel: true
-		}))
+		//.pipe(uglify({
+		//	toplevel: true
+		//}))
 		.pipe(rename({
 			suffix: '.min'
 		}))

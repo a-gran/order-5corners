@@ -570,23 +570,30 @@ body {
 	margin-right: 1.875rem;
 }
 
-.good-count__minus,
-.good-count__number,
-.good-count__plus {
+.decrement,
+.increment {
 	width: 51px;
 	height: 42px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: $reg16;
-}
-
-.good-count__minus,
-.good-count__plus {
 	font-size: $reg24;
 	position: relative;
 	bottom: 3px;
 	cursor: pointer;
+}
+
+.quontity {
+	outline: none;
+	border: none;
+	background-color: $grey3;
+	width: 51px;
+	height: 42px;
+	font-size: $reg16;
+	text-align: center;
+	position: relative;
+	top: 2px;
+	font-weight: $bold;
 }
 
 .close-btn {
@@ -694,7 +701,7 @@ body {
 	position: relative;
 }
 
-.user-box__search-input::after {
+.user-box__search-icon::after {
 	content: url(../img/searchOn.png);
 	position: absolute;
 	bottom: 12px;
