@@ -1,30 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
 	const goodCards = document.querySelectorAll('.good-card')
 
-	goodCards.forEach(() => {
-		// счетчик товаров
-		const counterIncrement = document.querySelector('.increment')
-		//console.log('counterIncrement', counterIncrement)
-		const counterDecrement = document.querySelector('.decrement')
-		//console.log('counterDecrement', counterDecrement)
-
-		let counterValue = document.querySelector('.quontity')
-		//console.log('counterValue', counterValue)
-		let quantity = 0
-
-		counterIncrement.addEventListener('click', () => {
-			if (quantity < 99) {
-				quantity++
-				counterValue.setAttribute('value', quantity)
-			}
-		})
-
-		counterDecrement.addEventListener('click', () => {
-			if (quantity > 0) {
-				quantity--
-				counterValue.setAttribute('value', quantity)
-			}
-		})
+	goodCards.forEach((item) => {
+		const decrement = item.querySelector('.decrement')
+		console.log(decrement)
 	})
 
 	// счетчик символов textarea
