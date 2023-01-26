@@ -4,7 +4,7 @@
 	"description": "test, order card",
 	"main": "index.js",
 	"engine": {
-		"node": "12.x.x"
+		"node": "18.12.1"
 	},
 	"devDependencies": {
 		"browser-sync": "^2.27.10",

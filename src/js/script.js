@@ -40,21 +40,18 @@ window.addEventListener('DOMContentLoaded', () => {
 	})
 
 	// яндекс-карта
-
-	let place = document.querySelector('#address').value
-	//let myGeocoder = ymaps.geocode(place)
-
 	let center = [55.727142, 37.469345]
 
 	function init() {
 		let map = new ymaps.Map('map', {
 			center,
-			zoom: 10
+			zoom: 10,
+			controls: ['searchControl']
 		})
 
 		map.controls.remove('typeSelector') // удаляем тип
 		map.controls.remove('zoomControl') // удаляем контрол зуммирования
-		map.controls.remove('rulerControl') // удаляем контрол правил
+		map.behaviors.disable('scrollZoom') // отключение zoom карты
 
 		let placemark = new ymaps.Placemark(center, {}, {
 			iconLayout: 'default#image',
@@ -64,6 +61,36 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 
 		map.geoObjects.add(placemark)
+
+		let placeInput = document.querySelector('#address')
+		//let mapBlock = document.querySelector('#map')
+		//let mapSearchField = mapBlock.querySelector('#placeholder + div')
+		//console.log('mapSearchField', mapSearchField)
+		let place = ''
+
+		const handlerEventClick = e => place = placeInput.value
+		const handlerEventEnter = e => {
+			if (e.code === 'Enter') {
+				place = placeInput.value
+				console.log('place', place)
+			}
+		}
+
+		placeInput.addEventListener('keydown', handlerEventEnter)
+		placeInput.addEventListener('click', handlerEventClick)
+
+		let searchControl = new ymaps.control.SearchControl({
+			options: {
+				provider: 'yandex#map'
+			}
+		})
+
+		searchControl.search(place)
+
+		//let myGeocoder = ymaps.geocode(place)
+		//myGeocoder.then(function (res) {
+		//	map.geoObjects.add(res.geoObjects)
+		//})
 	}
 
 	ymaps.ready(init)
@@ -90,7 +117,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		token,
 		type: 'NAME'
 	})
-
 })
 
 
