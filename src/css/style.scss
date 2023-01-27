@@ -788,8 +788,7 @@ body {
 }
 
 [class*="copyrights-pane"],
-[class*="float-button"] {
+[class*="float-button"],
+[class*="balloon_layout_normal"] {
 	display: none !important;
 }
-
-//[class*="searchbox-input__input"]
