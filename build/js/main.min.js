@@ -40,9 +40,9 @@ goodCards.forEach((item) => {
 })
 
 // яндекс-карта
-let init = () => {
+function init() {
+	// инициализация карты
 	let center = [55.727142, 37.469345]
-	let place
 
 	let map = new ymaps.Map('map', {
 		center,
@@ -60,26 +60,30 @@ let init = () => {
 		}
 	})
 
-	placeInput.addEventListener('keydown', e => {
-		if (e.code === 'Enter' && place != '') {
-			place = placeInput.value
-
-			searchControl.search(`${place}`)
-
-			// инициализация метки для карты
-			let placemark = new ymaps.Placemark(map.getCenter(`${place}`), {}, {
-				iconLayout: 'default#image',
-				iconImageHref: 'build/img/mark.png',
-				iconImageSize: [30, 30],
-				iconImageOffset: [0, 0]
-			})
-
-			// добавим метку на карту
-			map.geoObjects.add(placemark)
-		}
-	})
-
 	map.controls.add(searchControl)
+
+	// поиск места по адресу и установка маркера места
+	async function searchPlace(e) {
+		if (e.code === 'Enter' && placeInput.value != '') {
+			searchControl.search(`${placeInput.value}`)
+
+			await setTimeout(() => {
+				let newCenter = map.getCenter(`${placeInput.value}`)
+
+				let placemark = new ymaps.Placemark(newCenter, {}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'build/img/mark.png',
+					iconImageSize: [30, 30],
+					iconImageOffset: [0, 0]
+				})
+
+				//добавим метку на карту
+				map.geoObjects.add(placemark)
+			}, 500)
+		}
+	}
+
+	placeInput.addEventListener('keydown', searchPlace)
 
 	// удаляем различные исходные элементы карты
 	map.controls.remove('typeSelector') // удаляем тип
