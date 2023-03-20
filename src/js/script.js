@@ -64,7 +64,7 @@ function init() {
 
 	// поиск места по адресу и установка маркера места
 	async function searchPlace(e) {
-		if (e.code === 'Enter' && placeInput.value != '') {
+		if (e.code === 'Enter' && placeInput.value !== '') {
 			searchControl.search(`${placeInput.value}`)
 
 			await setTimeout(() => {
