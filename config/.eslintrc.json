@@ -1,0 +1,16 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "extends": "airbnb-base",
+    "rules": {
+        "max-len": ["error", 100, 4, {"ignoreUrls":  true}],
+        "no-console": ["error", {"allow": ["warn", "error"]}],
+        "no-alert": "error"
+    }
+}
